@@ -1,19 +1,24 @@
 import "./Header.css";
-import logo from "C:/Users/Caio Mognatti/Documents/Estudos e Livros/Alura/React/alura-books/src/img/logo.svg";
 
-export default function Header() {
+interface HeaderProps {
+  imagem: string;
+}
+
+const Header = ({ imagem }: HeaderProps) => {
   return (
     <header className="cabecalho">
       <nav className="nav-bar">
         <ul>
           <li className="logo">
-            <img src={logo} alt="logo"></img>
+            <img src={imagem} alt="logo"></img>
             <p>
-              <abbr title="teu cu">Alura</abbr> Books
+              <strong>Alura</strong> Books
             </p>
           </li>
         </ul>
       </nav>
     </header>
   );
-}
+};
+
+export default Header;
