@@ -1,17 +1,25 @@
-import "./logo.css";
+import styled from "styled-components";
 
-interface HeaderProps {
+const LogoStyle = styled.div`
+  display: flex;
+  font-size: 30px;
+  .logo-img {
+    margin-right: 10px;
+  }
+`;
+
+interface LogoProps {
   imagem: string;
 }
 
-const logo = ({ imagem }: HeaderProps) => {
+const logo = ({ imagem }: LogoProps) => {
   return (
-    <div className="logo">
+    <LogoStyle>
       <img src={imagem} alt="logo" className="logo-img"></img>
       <p>
         <strong>Alura</strong> Books
       </p>
-    </div>
+    </LogoStyle>
   );
 };
 
