@@ -1,22 +1,12 @@
-import "./Header.css";
+import NavBar from "../NavBar";
+import Logo from "../Logo";
+import logoImg from "C:/Users/Caio Mognatti/Documents/Estudos e Livros/Alura/React/alura-books/src/img/logo.svg";
 
-interface HeaderProps {
-  imagem: string;
-}
-
-const Header = ({ imagem }: HeaderProps) => {
+const Header = () => {
   return (
-    <header className="cabecalho">
-      <nav className="nav-bar">
-        <ul>
-          <li className="logo">
-            <img src={imagem} alt="logo"></img>
-            <p>
-              <strong>Alura</strong> Books
-            </p>
-          </li>
-        </ul>
-      </nav>
+    <header className="header">
+      <Logo imagem={logoImg}></Logo>
+      <NavBar></NavBar>
     </header>
   );
 };

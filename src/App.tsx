@@ -1,11 +1,10 @@
-import React from "react";
+import "./App.css";
 import Header from "./Components/Header";
-import logo from "C:/Users/Caio Mognatti/Documents/Estudos e Livros/Alura/React/alura-books/src/img/logo.svg";
 
 function App() {
   return (
     <div className="App">
-      <Header imagem={logo}></Header>
+      <Header />
       <body></body>
     </div>
   );
