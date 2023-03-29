@@ -1,8 +1,8 @@
-import NavBar from "../NavBar";
+import NavBarText from "../NavBarText";
+import NavBarIcons from "../NavBarIcons";
 import Logo from "../Logo";
 import logoImg from "C:/Users/Caio Mognatti/Documents/Estudos e Livros/Alura/React/alura-books/src/img/logo.svg";
 import styled from "styled-components";
-import NavBarIcons from "../NavBarIcons";
 
 const HeaderStyle = styled.header`
   background-color: white;
@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <HeaderStyle>
       <Logo imagem={logoImg}></Logo>
-      <NavBar />
+      <NavBarText />
       <NavBarIcons />
     </HeaderStyle>
   );
