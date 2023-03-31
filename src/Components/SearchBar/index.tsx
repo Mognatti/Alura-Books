@@ -1,22 +1,48 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Input from "../Input";
-import { useState } from "react";
-import { livros } from "./BaseDados";
+import { livros, LivroProps } from "./BaseDados";
 
 const SectionContainer = styled.section`
+  color: #fff;
+  text-align: center;
+  height: 470px;
+  width: 100%;
+  color: #fff;
+  padding: 85px 0;
+`;
+const ListaLivros = styled.ul`
   display: flex;
   justify-content: center;
-`;
-
-const ListaLivros = styled.ul`
-  margin-top: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  li {
+    width: 200px;
+  }
+  img {
+    width: 100px;
+  }
+  p {
+  }
+  &:hover {
+    border: 1px solid white;
+  }
 `;
 
 export default function SearchBar() {
-  const [busca, setBusca] = useState("");
+  const [search, setSearch] = useState<LivroProps[]>([]);
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    setBusca(e.target.value);
+    const searchvalue = e.target.value.toLowerCase();
+    const searchResponse = livros.filter((livro) =>
+      livro.nome.toLowerCase().includes(searchvalue)
+    );
+    if (searchvalue === "") {
+      setSearch([]);
+    } else {
+      setSearch(searchResponse);
+    }
   };
 
   return (
@@ -26,15 +52,14 @@ export default function SearchBar() {
           type="text"
           id="searchInput"
           placeholder="Buscar livro..."
-          value={busca}
           onBlur={handleBlur}
         ></Input>
       </label>
       <ListaLivros>
-        {livros.map((livro) => (
-          <li key={livro.nome}>
-            <img src={livro.src} alt={livro.nome}></img>
-            {livro.nome}
+        {search.map((livro) => (
+          <li key={livro.id}>
+            <img src={livro.src} alt={`Imagem de ${livro.nome}`}></img>
+            <p>{livro.nome}</p>
           </li>
         ))}
       </ListaLivros>

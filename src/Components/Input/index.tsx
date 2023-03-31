@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
 const SearchBarInput = styled.input`
-  border-radius: 15px;
   border: none;
   padding: 18px;
   font-size: 16px;
   margin-top: 32px;
   width: 60vw;
+  border-radius: 50px;
+  font-size: 16px;
+  margin-bottom: 30px;
+
+  &::placeholder {
+    font-size: 16px;
+  }
 `;
 
 interface InputProps {
