@@ -3,6 +3,7 @@ import styled from "styled-components";
 import SearchBar from "./Components/SearchBar";
 import AddBook from "./Components/AddBook";
 import LatestBooks from "./Components/LatestBooks";
+import RecommendationCard from "./Components/RecommendationCard";
 
 const AppContainer = styled.section`
   width: 100%;
@@ -15,6 +16,12 @@ function App() {
       <Header />
       <SearchBar />
       <AddBook />
+      <RecommendationCard
+        titulo="teste"
+        subtitulo="teste"
+        descricao="teste"
+        img="https://i.pinimg.com/474x/bc/98/6c/bc986c22d09662d26d5fe228c4c57e59.jpg"
+      />
       <LatestBooks />
     </AppContainer>
   );
