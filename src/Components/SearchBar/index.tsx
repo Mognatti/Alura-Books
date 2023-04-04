@@ -8,7 +8,7 @@ const SectionContainer = styled.section`
   text-align: center;
   width: 100%;
   color: #fff;
-  padding: 85px 0;
+  padding: 32px 0;
 `;
 export const ListaLivros = styled.ul`
   display: flex;

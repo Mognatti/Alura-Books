@@ -9,11 +9,14 @@ interface LatestBooksProps {
 const LatestBooksContainer = styled.section<LatestBooksProps>`
   color: ${(props) => props.color || "#fff"};
   text-align: center;
+  margin-top: 15px;
   width: 100%;
   padding: 85px 0;
+  background-color: white;
 
   h2 {
-    padding: 24px;
+    margin-top: -30px;
+    padding: 16px;
   }
 `;
 
