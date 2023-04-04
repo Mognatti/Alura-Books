@@ -6,12 +6,11 @@ import { livros, LivroProps } from "./BaseDados";
 const SectionContainer = styled.section`
   color: #fff;
   text-align: center;
-  height: 470px;
   width: 100%;
   color: #fff;
   padding: 85px 0;
 `;
-const ListaLivros = styled.ul`
+export const ListaLivros = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,11 +21,6 @@ const ListaLivros = styled.ul`
   }
   img {
     width: 100px;
-  }
-  p {
-  }
-  &:hover {
-    border: 1px solid white;
   }
 `;
 

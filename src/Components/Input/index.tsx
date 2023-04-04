@@ -16,9 +16,9 @@ const SearchBarInput = styled.input`
 `;
 
 interface InputProps {
-  type: string;
-  id: string;
-  placeholder: string;
+  type?: string;
+  id?: string;
+  placeholder?: string;
   value?: string;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
 }

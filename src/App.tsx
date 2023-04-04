@@ -1,11 +1,12 @@
 import Header from "./Components/Header";
 import styled from "styled-components";
 import SearchBar from "./Components/SearchBar";
+import AddBook from "./Components/AddBook";
+import LatestBooks from "./Components/LatestBooks";
 
 const AppContainer = styled.section`
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(90deg, #002f52 35%, #326589);
+  width: 100%;
+  height: 100%;
 `;
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
     <AppContainer>
       <Header />
       <SearchBar />
+      <AddBook />
+      <LatestBooks />
     </AppContainer>
   );
 }
