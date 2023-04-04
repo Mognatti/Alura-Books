@@ -2,11 +2,14 @@ import styled from "styled-components";
 import { livros } from "../SearchBar/BaseDados";
 import { ListaLivros } from "../SearchBar";
 
-const LatestBooksContainer = styled.section`
-  color: #fff;
+interface LatestBooksProps {
+  color?: string;
+}
+
+const LatestBooksContainer = styled.section<LatestBooksProps>`
+  color: ${(props) => props.color || "#fff"};
   text-align: center;
   width: 100%;
-  color: #fff;
   padding: 85px 0;
 
   h2 {
@@ -18,7 +21,7 @@ export default function LatestBooks() {
   const lastBooks = livros.filter((livro) => livro.id > livros.length - 3);
 
   return (
-    <LatestBooksContainer>
+    <LatestBooksContainer color="#000">
       <h2> Últimos Lançamentos: </h2>
       <ListaLivros>
         {lastBooks.map((livro) => (
