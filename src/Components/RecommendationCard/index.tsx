@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Title } from "../Title";
 
 const CardDiv = styled.div`
   align-items: center;
@@ -12,7 +13,6 @@ const CardDiv = styled.div`
   justify-content: space-around;
   width: 100%;
 `;
-
 const Button = styled.button`
   background-color: #eb9b00;
   color: #fff;
@@ -27,11 +27,9 @@ const Button = styled.button`
     cursor: pointer;
   }
 `;
-
 const Descricao = styled.p`
   max-width: 300px;
 `;
-
 const Subtitulo = styled.h4`
   color: #002f52;
   font-size: 18px;
@@ -41,6 +39,7 @@ const Subtitulo = styled.h4`
 const ImgLivro = styled.img`
   width: 150px;
 `;
+
 interface RecommendationProps {
   titulo: string;
   subtitulo?: string;
@@ -56,11 +55,17 @@ export default function RecommendationCard({
 }: RecommendationProps) {
   return (
     <CardDiv>
-      <h3>{titulo}</h3>
-      <Subtitulo>{subtitulo}</Subtitulo>
-      <Descricao>{descricao}</Descricao>
-      <ImgLivro src={img} alt="Imagem do livro" />
-      <Button>Saiba Mais</Button>
+      <div>
+        <Title fontSize="16px" cor="#EB9B00" textAlign="left">
+          {titulo}
+        </Title>
+        <Subtitulo>{subtitulo}</Subtitulo>
+        <Descricao>{descricao}</Descricao>
+      </div>
+      <div>
+        <ImgLivro src={img} alt="Imagem do livro" />
+        <Button>Saiba Mais</Button>
+      </div>
     </CardDiv>
   );
 }

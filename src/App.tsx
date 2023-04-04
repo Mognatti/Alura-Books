@@ -17,9 +17,9 @@ function App() {
       <SearchBar />
       <AddBook />
       <RecommendationCard
-        titulo="teste"
-        subtitulo="teste"
-        descricao="teste"
+        titulo="Novo Livro"
+        subtitulo="Este é um livro totalmente novo!"
+        descricao="Definitivamente é um dos livros já feitos!"
         img="https://i.pinimg.com/474x/bc/98/6c/bc986c22d09662d26d5fe228c4c57e59.jpg"
       />
       <LatestBooks />

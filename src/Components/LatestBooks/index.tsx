@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { livros } from "../SearchBar/BaseDados";
 import { ListaLivros } from "../SearchBar";
+import { Title } from "../Title";
 
 interface LatestBooksProps {
   color?: string;
@@ -25,7 +26,7 @@ export default function LatestBooks() {
 
   return (
     <LatestBooksContainer color="#000">
-      <h2> Últimos Lançamentos: </h2>
+      <Title fontSize={"36px"}> Últimos Lançamentos: </Title>
       <ListaLivros>
         {lastBooks.map((livro) => (
           <li key={livro.id}>
