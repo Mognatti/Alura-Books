@@ -7,7 +7,6 @@ interface TitleProps {
 }
 
 export const Title = styled.h2<TitleProps>`
-  width: 100%;
   padding: 30px 0;
   background-color: #fff;
   color: ${(props) => props.cor || "#000"};
