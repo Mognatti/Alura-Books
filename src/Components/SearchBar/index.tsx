@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Input from "../Input";
-import { livros, LivroProps } from "./BaseDados";
+import { livros, LivroProps, GetBooks } from "./BaseDados";
 
 const SectionContainer = styled.section`
   color: #fff;
@@ -39,6 +39,9 @@ export default function SearchBar() {
     }
   };
 
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>){
+  }
+
   return (
     <SectionContainer>
       <label htmlFor="searchInput">
@@ -57,6 +60,9 @@ export default function SearchBar() {
           </li>
         ))}
       </ListaLivros>
+      <p>
+        <button onClick={handleClick}>Livros da Lista: </button>
+      </p>
     </SectionContainer>
   );
 }

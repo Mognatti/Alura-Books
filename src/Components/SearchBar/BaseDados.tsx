@@ -25,3 +25,16 @@ export const livros: LivroProps[] = [
   { nome: "Cangaceiro em JavaScript", id: 4, src: randomCover() },
   { nome: "Aventureiros do Java", id: 5, src: randomCover() },
 ];
+
+export async function GetBooks() {
+  try {
+    const res = await fetch("http://localhost:8000/livros", {
+      method: "GET",
+      mode: "no-cors",
+    });
+    const { data }: { data: any } = await res.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
