@@ -27,14 +27,10 @@ export const livros: LivroProps[] = [
 ];
 
 export async function GetBooks() {
-  try {
-    const res = await fetch("http://localhost:8000/livros", {
-      method: "GET",
-      mode: "no-cors",
+  fetch("http://localhost:8000/livros")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      return <p>{data}</p>;
     });
-    const { data }: { data: any } = await res.json();
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-  }
 }

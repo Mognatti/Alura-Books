@@ -39,8 +39,9 @@ export default function SearchBar() {
     }
   };
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>){
-  }
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    GetBooks();
+  };
 
   return (
     <SectionContainer>
